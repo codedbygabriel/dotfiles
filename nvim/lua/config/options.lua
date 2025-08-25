@@ -1,4 +1,3 @@
-vim.g.mapleader = " " -- Define <leader> como espaço.
 vim.opt.termguicolors = true
 
 local cmd = vim.cmd -- Atalho.
@@ -11,4 +10,3 @@ option.autoindent = true
 option.cursorline = true
 option.number = true
 option.relativenumber = true
-
