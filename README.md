@@ -13,9 +13,11 @@
  ## Requirements
  
  - Qtile
- -  Kitty / Alacritty
- -   Picom
- -   JetBrains Mono
+ - Nvim 
+    - ripgrep, fd, lua, npm...
+ - Kitty / Alacritty
+ - Picom
+ - JetBrains Mono
  
  # Install Process
  
