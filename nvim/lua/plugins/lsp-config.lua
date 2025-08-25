@@ -1,18 +1,3 @@
--- adicione aqui suas lsp's
-_G.user_servers = {
-	-- Web Development
-	html = "html",
-	css = "cssls",
-	javascript = "ts_ls",
-
-	-- Back-end
-	java = "jdtls",
-	python = "pylsp",
-	lua = "lua_ls",
-	c = "clangd",
-}
-
-
 return {
 	{
 		"williamboman/mason.nvim",
