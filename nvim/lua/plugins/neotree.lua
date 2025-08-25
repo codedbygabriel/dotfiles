@@ -10,7 +10,7 @@ return {
 		lazy = false, -- neo-tree will lazily load itself
 		config = function()
 			require("neo-tree").setup({
-				vim.keymap.set("n", "<C-n>", "<cmd>Neotree toggle<cr>", { desc = "Toggle Neo-tree" }),
+				vim.keymap.set("n", "<leader>n", ":Neotree toggle<cr>", { desc = "Toggle Neo-tree" }),
 				filter = {dotfiles = true,},
 			})
 		end,
