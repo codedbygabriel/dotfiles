@@ -7,29 +7,7 @@
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+alias nvimrc='cd ~/.config/nvim && nvim .'
 
-# Made by Gabriel
-
-# Pacman Aliases
-alias install='sudo pacman -S'
-alias update='sudo pacman -Syyu'
-alias remove='sudo pacman -R'
-alias aur='yay'
-
-# Some features to navigation
-alias del='sudo rm -rf'
-
-# .Configs related
-alias bconfig='helix ~/.bashrc'
-alias qconfig='helix ~/.config/qtile/config.py'
-alias aconfig='helix ~/.config/alacritty/alacritty.toml'
-alias pconfig='sudo helix /etc/xdg/picom.conf'
-
-# Programming
-alias helc='cd ~/Documents/GitHub/learning-c/Chapter\ 01\ -\ A\ Tutorial\ Introduction/'
-
-# Books
-alias book='cd ~/books/programming/'
-alias bmath='cd ~/enem/matematica'
-
-PS1='Be careful, my dear \u \W\ || '
+fastfetch --file ~/ascii.txt
+PS1='\[\e[32m\]┌──(\[\e[94;1m\]\u\[\e[94m\]@\[\e[94m\]\h\[\e[0;32m\])-[\[\e[38;5;46;1m\]\w\[\e[0;32m\]] [\[\e[32m\]$?\[\e[32m\]]\n\[\e[32m\]╰─\[\e[94;1m\]\$\[\e[0m\] '
