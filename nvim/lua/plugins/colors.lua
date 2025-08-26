@@ -31,6 +31,7 @@ return {
 			require("everforest").setup({
 				background = "hard",
 				transparent_background_level = 1,
+				italics = true,
 			})
 		end,
 	},
