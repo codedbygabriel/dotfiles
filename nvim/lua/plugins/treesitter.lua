@@ -1,10 +1,8 @@
-local langs = {}
+local languages = {}
 
-
-for language, server in pairs(_G.user_servers) do
-	table.insert(langs, language)
+for language, _ in pairs(user_servers) do
+	table.insert(languages, language)
 end
-
 
 return {
 	"nvim-treesitter/nvim-treesitter",
@@ -13,11 +11,9 @@ return {
 	build = ":TSUpdate",
 	config = function()
 		require("nvim-treesitter.configs").setup({
-			ensure_installed = langs, -- Deriva da variável global user_servers
+			ensure_installed = languages, -- Deriva da variável global user_servers
 			highlight = { enable = true },
 			indent = { enable = true },
 		})
 	end,
 }
-
-

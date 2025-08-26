@@ -21,7 +21,7 @@ return {
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local lspconfig = require("lspconfig")
 
-			for language, server_name in pairs(_G.user_servers) do
+			for _, server_name in pairs(user_servers) do
 				lspconfig[server_name].setup({
 					capabilities = capabilities,
 				})
@@ -31,6 +31,7 @@ return {
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 			vim.keymap.set("n", "ca", vim.lsp.buf.code_action, {})
+			vim.keymap.set("n", "cr", vim.lsp.buf.references, {})
 		end,
 	},
 }
