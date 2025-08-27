@@ -28,6 +28,8 @@ _G.user_servers = {
 	python = "pylsp",
 	lua = "lua_ls",
 	c = "clangd",
+	go = "gopls",
+	-- sla
 	markdown = "marksman",
 }
 

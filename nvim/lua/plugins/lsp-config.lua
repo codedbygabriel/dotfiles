@@ -1,3 +1,9 @@
+local lang = {}
+
+for _, lsp in pairs(user_servers) do
+	table.insert(lang, lsp)
+end
+
 return {
 	{
 		"williamboman/mason.nvim",
@@ -11,7 +17,7 @@ return {
 		lazy = false,
 		opts = {
 			auto_install = true,
-			ensure_installed = user_servers,
+			ensure_installed = lang,
 		},
 	},
 	{

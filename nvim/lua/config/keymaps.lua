@@ -34,10 +34,12 @@ keymap.set(
 -- Gradle
 keymap.set("n", "<leader>gr", ":!gradle run<CR>", { desc = "Gradle, run..." })
 
--- idk yet
-keymap.set("n", "<leader>fp", function()
-	local file_dir = vim.fn.expand("%:p")
-	local file_name = vim.fn.expand("%")
+-- Auto Tree (And LSP) add 
+keymap.set("n", "<leader>lsp", function()
+	local lang = vim.fn.input("What language you wanna add? ")
+	local langLSP = vim.fn.input(string.format("What LSP does %s uses? ", lang))
 
-	print(file_dir, file_name)
+	-- Angular angular-language-server
+	vim.cmd(string.format(':MasonInstall %s', langLSP))
+	vim.cmd(string.format(':TSInstall %s', lang))
 end)
