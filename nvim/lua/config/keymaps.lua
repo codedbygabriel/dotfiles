@@ -1,4 +1,6 @@
-vim.g.mapleader = " "     -- Define <leader> como espaço.
+vim.g.mapleader = " " -- Define <leader> como espaço.
+
+_G.is_copilot_activated = false
 local keymap = vim.keymap -- Atalho.
 
 -- Movimentação
@@ -31,15 +33,25 @@ keymap.set(
 	{ desc = "Creates a new terminal on a horizontal split and throws it down." }
 )
 
--- Gradle
-keymap.set("n", "<leader>gr", ":!gradle run<CR>", { desc = "Gradle, run..." })
-
--- Auto Tree (And LSP) add 
+-- Auto Tree (And LSP) add
 keymap.set("n", "<leader>lsp", function()
 	local lang = vim.fn.input("What language you wanna add? ")
 	local langLSP = vim.fn.input(string.format("What LSP does %s uses? ", lang))
 
 	-- Angular angular-language-server
-	vim.cmd(string.format(':MasonInstall %s', langLSP))
-	vim.cmd(string.format(':TSInstall %s', lang))
+	vim.cmd(string.format(":MasonInstall %s", langLSP))
+	vim.cmd(string.format(":TSInstall %s", lang))
+end)
+
+-- Copilot related
+keymap.set("n", "<leader>ai", function()
+	if is_copilot_activated == true then
+		vim.cmd(":Copilot disable")
+		_G.is_copilot_activated = false
+		print("Disabled Copilot")
+	else
+		vim.cmd(":Copilot enable")
+		_G.is_copilot_activated = true
+		print("Enabled Copilot")
+	end
 end)

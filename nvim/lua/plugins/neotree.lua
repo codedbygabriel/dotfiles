@@ -5,13 +5,13 @@ return {
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"MunifTanjim/nui.nvim",
-			"nvim-tree/nvim-web-devicons", -- optional, but recommended
+			"nvim-tree/nvim-web-devicons",
 		},
-		lazy = false, -- neo-tree will lazily load itself
+		lazy = false,
 		config = function()
 			require("neo-tree").setup({
 				vim.keymap.set("n", "<leader>n", ":Neotree toggle<cr>", { desc = "Toggle Neo-tree" }),
-				filter = {dotfiles = true,},
+				filter = { dotfiles = true },
 			})
 		end,
 	},
