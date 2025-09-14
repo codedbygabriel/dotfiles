@@ -1,28 +1,5 @@
-<h1 align=left>Dotfiles - Qtile </h1>
-<img src="https://i.imgur.com/DfdgHFV.jpeg">
-
-
-
-## Who should use this repository
-
- 
- 1. Any Linux user that doesn't have the time to configure a entire window manager to their needs;
- 2. Anyone who doesn't have the knowledge, although i don't recommend it;
- 3. Whoever have good taste :).
- 
- ## Requirements
- 
- - Qtile
- - Nvim 
-    - ripgrep, fd, lua, npm...
- - Kitty / Alacritty
- - Picom
- - JetBrains Mono
- 
- # Install Process
- 
- 1. Move Qtile folder to: ~/.config/
- 2. Move picom.conf to ~/etc/xdg/
- 3. Move Kitty to ~/.config/kitty
- 4. Install JetBrains Mono using: `sudo pacman -S ttf-jetbrains-mono`.
- 5. Restart
+# My Dotfiles!
+<details>
+    <summary>This repo is not made to be used as a copy and paste only type of thing, it may work, or may not, take the risk.</summary>
+    <code>git clone https://github.com/codedbygabriel/dotfiles ~/.config</code>
+</details>
