@@ -33,6 +33,13 @@ keymap.set(
 	{ desc = "Creates a new terminal on a horizontal split and throws it down." }
 )
 
+keymap.set(
+	"n",
+	"<leader>gb",
+	":GitBlameToggle<CR>",
+	{ desc = "Git blame toggle" }
+)
+
 -- Auto Tree (And LSP) add
 keymap.set("n", "<leader>lsp", function()
 	local lang = vim.fn.input("What language you wanna add? ")

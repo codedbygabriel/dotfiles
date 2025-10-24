@@ -25,12 +25,11 @@ return {
 		lazy = false,
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
-			local lspconfig = require("lspconfig")
-
 			for _, server_name in pairs(user_servers) do
-				lspconfig[server_name].setup({
+				vim.lsp.config(server_name, {
 					capabilities = capabilities,
 				})
+				vim.lsp.enable({ server_name })
 			end
 
 			-- Keymaps

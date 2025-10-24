@@ -1,7 +1,5 @@
 return {
-	{
-		"github/copilot.vim",
-	},
+	{ 'wakatime/vim-wakatime', lazy = false },
 	{
 		"akinsho/toggleterm.nvim",
 		version = "*",
@@ -45,7 +43,7 @@ return {
 		lazy = false,
 		config = function()
 			require("themery").setup({
-				themes = { "kanagawa", "gruvbox", "everforest", "poimandres", "monochrome", "dark-orchid", "vscode_modern"},
+				themes = { "kanagawa", "gruvbox","miasma",},
 				livePreview = true,
 			})
 			vim.keymap.set("n", "ts", ":Themery<CR>", { desc = "Show Themes" })

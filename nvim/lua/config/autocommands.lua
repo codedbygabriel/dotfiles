@@ -1,2 +1,1 @@
--- Start without copilot.
-vim.cmd(":Copilot disable")
+	vim.cmd("colorscheme kanagawa-dragon")
