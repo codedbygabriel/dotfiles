@@ -43,7 +43,7 @@ return {
 		lazy = false,
 		config = function()
 			require("themery").setup({
-				themes = { "kanagawa", "gruvbox","miasma",},
+				themes = { "kanagawa", "gruvbox","miasma", "gruber-darker"},
 				livePreview = true,
 			})
 			vim.keymap.set("n", "ts", ":Themery<CR>", { desc = "Show Themes" })

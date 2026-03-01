@@ -1,4 +1,5 @@
 return {
+	{ "blazkowolf/gruber-darker.nvim" },
 	{
 		"rebelot/kanagawa.nvim",
 		lazy = false,
